@@ -3,6 +3,7 @@ package com.xuxperience.exploretours.repository;
 import com.xuxperience.exploretours.entity.Tour;
 import com.xuxperience.exploretours.entity.TourPackage;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,5 +13,5 @@ import java.util.List;
  */
 @Repository
 public interface TourPackageRepository extends CrudRepository<TourPackage, String> {
-    TourPackage findByName(String name);
+    TourPackage findByName(@Param("name") String name);
 }
